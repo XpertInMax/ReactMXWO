@@ -1,6 +1,6 @@
 const siteIds = [
     {
-        label: 'Site 1', value: 'site-1'
+        label: 'CH - Chester SC', value: 'CH'
     }, {
         label: 'Site 2', value: 'site-2'
     }, {
@@ -16,7 +16,7 @@ const siteIds = [
 
 const assets = [
     {
-        label: 'Asset 1', value: 'asset-1'
+        label: 'OVERHEAD BRIDGE CRANES', value: 'CH-0C-700'
     }, {
         label: 'Asset 2', value: 'asset-2'
     }, {
@@ -32,7 +32,7 @@ const assets = [
 
 const workOrderTypes = [
     {
-        label: 'WO Type 1', value: 'wo-type-1'
+        label: 'Capital Project', value: 'CP'
     },
     {
         label: 'WO Type 2', value: 'wo-type-2'

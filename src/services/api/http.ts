@@ -10,7 +10,7 @@ http.interceptors.request.use((config: AxiosRequestConfig):any => {
    // default headers
    config.headers = {
     'properties': 'wonum,assetnum,workorderid',
-    'apikey': '17q52fma1t1ok9r57tl12bk98odlu6p1qqnka4q6',
+    'maxauth': 'R0lOVE1BWEFQSTpNYXhpbW8yMDI0IQ==',
     'Content-Type': 'application/json',
   }
   if (!token) return config;
