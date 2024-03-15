@@ -19,7 +19,7 @@ export default {
       const response = await http.get(url);
       return response;
     } catch (err: any) {
-      return false;
+      return err?.response || false;
     }
   },
   async post(url: string, payload: object) {
@@ -28,7 +28,7 @@ export default {
       const response = await http.post(url, payload);
       return response;
     } catch (err: any) {
-      return false;
+      return  err?.response || false;
     }
   },
   async put(url: string, payload: object) {
@@ -37,16 +37,16 @@ export default {
       const response = await http.put(url, payload);
       return response;
     } catch (err: any) {
-      return false;
+      return  err?.response || false;
     }
   },
   async delete(url: string) {
     try {
     //  await refreshToken();
-      await http.delete(url);
-      return true;
+      const response = await http.delete(url);
+      return response;
     } catch (err: any) {
-      return false;
+      return  err?.response || false;
     }
   },
 };

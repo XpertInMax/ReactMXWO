@@ -1,10 +1,10 @@
-import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import GAFlogo from '../../assets/images/GAFLogo.png'; 
 
 const navigation = [
-  { name: 'Work Orders', href: '#', current: true },
-  { name: 'New Work Order', href: '#', current: false }
+  { name: 'Create Work Order', href: '#', current: true },
+  { name: 'Last 24 hrs Receipts', href: '#', current: false }
 ]
 
 function classNames(...classes: any) {
@@ -17,7 +17,7 @@ export default function Header() {
       {({ open }: any) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -30,23 +30,23 @@ export default function Header() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="h-16 flex flex-1 items-center justify-between sm:items-stretch sm:justify-between bg-white-70">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    className="h-16 w-auto"
+                    src={GAFlogo}
+                    alt="GAF Logo"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex flex-1 space-x-4 items-center sm:justify-center">
+                  <div className="flex flex-1 space-x-4 items-center sm:justify-center" style={{marginTop: '10px'}}>
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-blue-600 text-white' : 'text-gray hover:bg-blue-600 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current ? 'border-b-red-800' : 'border-b-red-800 hover:border-b-red-800',
+                          'px-3 py-2 font-medium no-underline text-lg text-blue-600'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

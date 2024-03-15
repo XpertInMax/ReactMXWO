@@ -32,7 +32,7 @@ module.exports = {
 
       // Loader for image files
       {
-        test: /\.(?:ico|png|jpg|jpeg|gif)$/i,
+        test: /\.(?:ico|png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
       },
 
